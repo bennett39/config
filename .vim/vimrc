@@ -19,8 +19,12 @@ call plug#end()
 " 256 color support
 set t_Co=256
 
+" jk is escape
+inoremap jk <esc>
+
 " coloring and background
 syntax on
+set cursorline
 set background=dark
 
 " color scheme
@@ -100,10 +104,7 @@ let g:NERDCompactSexyComs = 1
 noremap <Leader>d :NERDTree<CR>
 let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
 " Git Gutter settings
 let g:gitgutter_sign_column_always=1
-updatetime=100
