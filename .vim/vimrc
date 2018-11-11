@@ -5,11 +5,11 @@ call plug#begin('~/.vim/pluggies')
 Plug 'tpope/vim-sensible'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'wincent/command-t', {
-    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-    \ }
+" Plug 'wincent/command-t', {
+    " \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    " \ }
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 
@@ -61,28 +61,28 @@ set autoindent
 set smartindent
 
 " remove white space on save
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
 
 " highlight search results
 set hlsearch
 
 " use esc to cancel a search
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+" nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " use leader-leader to switch between prev document
-nnoremap <Leader><Leader> :e#<CR>
+" nnoremap <Leader><Leader> :e#<CR>
 
 " show matching parentheses
 set showmatch
 
 " enable mouse usage
-set mouse=a
+" set mouse=a
 
 " arrow keys (I know...)
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
 
 " search settings
 set ignorecase
@@ -90,7 +90,7 @@ set smartcase
 set incsearch
 
 " command-t additional commands
-noremap <Leader>r :CommandTFlush<CR>
+" noremap <Leader>r :CommandTFlush<CR>
 set wildignore+=*.log,*.sql,*.cache
 
 " nerdcomments settings
