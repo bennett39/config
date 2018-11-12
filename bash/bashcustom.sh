@@ -26,7 +26,7 @@ function v() {
 }
 
 function log39() {
-	vim ~/Workspace/git-repos/100-days-of-code/log.md
+    vim ~/Workspace/git-repos/100-days-of-code/log.md
 }
 
 up(){
