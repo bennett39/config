@@ -1,0 +1,110 @@
+"[1 Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/pluggies')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'itchyny/lightline.vim'
+" Plug 'wincent/command-t', {
+    " \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    " \ }
+Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
+Plug 'airblade/vim-gitgutter'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+" 256 color support
+set t_Co=256
+
+" jk is escape
+inoremap jk <esc>
+
+" coloring and background
+syntax on
+set cursorline
+set background=dark
+
+" color scheme
+colorscheme palenight
+let g:lightline = {'colorscheme': 'palenight'}
+
+" font
+set guifont=FiraCode\ 12
+
+" add colored column to avoid typing too far right
+set colorcolumn=72
+set textwidth=72
+
+" add line numbers
+set number
+set relativenumber
+
+" leader key
+let mapleader=" "
+map <leader>s :source ~/.vimrc<CR>
+
+" keep more in memory
+set hidden
+set history=100
+
+" indentation settings
+filetype indent on
+set nowrap
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+set autoindent
+set smartindent
+
+" remove white space on save
+" autocmd BufWritePre * :%s/\s\+$//e
+
+" highlight search results
+set hlsearch
+
+" use esc to cancel a search
+" nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
+" use leader-leader to switch between prev document
+" nnoremap <Leader><Leader> :e#<CR>
+
+" show matching parentheses
+set showmatch
+
+" enable mouse usage
+" set mouse=a
+
+" arrow keys (I know...)
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
+
+" search settings
+set ignorecase
+set smartcase
+set incsearch
+
+" command-t additional commands
+" noremap <Leader>r :CommandTFlush<CR>
+set wildignore+=*.log,*.sql,*.cache
+
+" nerdcomments settings
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" NERDTree keymap
+noremap <Leader>d :NERDTree<CR>
+let NERDTreeMapActivateNode='<right>'
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+
+" Git Gutter settings
+let g:gitgutter_sign_column_always=1
