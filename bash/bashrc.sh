@@ -56,6 +56,9 @@ export GREP_OPTIONS='--color=auto'
 # Set Vim as my default editor
 export EDITOR=vim
 
+# UTF-8 locale
+export LANG="C.UTF-8"
+
 # History
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=100
