@@ -44,6 +44,7 @@ alias bashrc='cd ~/Workspace/git-repos/hello-world/bash/ && vim bashrc.sh'
 alias vimrc='cd ~/Workspace/git-repos/hello-world/vim/ && vim vimrc'
 alias euler='cd ~/Workspace/git-repos/euler'
 alias feed='cd ~/Workspace/git-repos/dev-feed/'
+alias tbot='cd ~/Workspace/git-repos/twitter-bot'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
