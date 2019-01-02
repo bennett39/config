@@ -47,6 +47,7 @@ alias feed='cd ~/Workspace/git-repos/dev-feed/'
 alias tbot='cd ~/Workspace/git-repos/twitter-bot'
 alias myEnv='source ~/myEnv/bin/activate'
 alias sudoku='cd ~/Workspace/git-repos/sudoku-solver'
+alias python='python3.6'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
