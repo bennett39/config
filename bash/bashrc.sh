@@ -83,4 +83,4 @@ for pyenv_path in /usr/local/var/pyenv /opt/pyenv; do
 done
 
 # pyenv-virtualenv stuff
-$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+$ echo 'eval "$(pyenv virtualenv-init -)"'
