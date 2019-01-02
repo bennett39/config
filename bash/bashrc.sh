@@ -74,7 +74,6 @@ if [ -f '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/path
 if [ -f '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/completion.bash.inc'; fi
 
 # pyenv stuff https://github.com/yyuu/pyenv
-# Keep near end
 for pyenv_path in /usr/local/var/pyenv /opt/pyenv; do
     if [[ -d $pyenv_path ]]; then
         export PYENV_ROOT=$pyenv_path
@@ -84,3 +83,5 @@ for pyenv_path in /usr/local/var/pyenv /opt/pyenv; do
     fi
 done
 
+# pyenv-virtualenv stuff
+$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
