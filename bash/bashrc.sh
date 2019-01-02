@@ -45,7 +45,6 @@ alias vimrc='cd ~/Workspace/git-repos/hello-world/vim/ && vim vimrc'
 alias euler='cd ~/Workspace/git-repos/euler'
 alias feed='cd ~/Workspace/git-repos/dev-feed/'
 alias tbot='cd ~/Workspace/git-repos/twitter-bot'
-alias myEnv='source ~/myEnv/bin/activate'
 alias sudoku='cd ~/Workspace/git-repos/sudoku-solver'
 alias python='python3.6'
 
