@@ -40,6 +40,7 @@ alias ll='ls -ahl --color=auto'
 # Common files/directories
 alias repos='cd ~/Workspace/git-repos'
 alias log39='cd ~/Workspace/git-repos/100-days-of-code/ && vim log.md'
+alias logh='ga && gc "Add daily log" && gh'
 alias bashrc='cd ~/Workspace/git-repos/hello-world/bash/ && vim bashrc.sh'
 alias vimrc='cd ~/Workspace/git-repos/hello-world/vim/ && vim vimrc'
 alias euler='cd ~/Workspace/git-repos/euler'
