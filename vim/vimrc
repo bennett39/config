@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdcommenter'
 " Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
+Plug 'pangloss/vim-javascript'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
