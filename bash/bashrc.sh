@@ -48,6 +48,7 @@ alias feed='cd ~/Workspace/git-repos/dev-feed/'
 alias tbot='cd ~/Workspace/git-repos/twitter-bot'
 alias sudoku='cd ~/Workspace/git-repos/sudoku-solver'
 alias react='cd ~/Workspace/git-repos/react-hello'
+alias folio='cd ~/Workspace/git-repos/portfolio/src'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
