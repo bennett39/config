@@ -5,11 +5,7 @@ call plug#begin('~/.vim/pluggies')
 Plug 'tpope/vim-sensible'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
-" Plug 'wincent/command-t', {
-    " \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-    " \ }
 Plug 'scrooloose/nerdcommenter'
-" Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
