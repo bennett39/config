@@ -2,10 +2,11 @@
 
 # Git
 alias gs='git status'
-alias gl='git pull origin '
+alias gp='git pull origin '
 alias gh='git push'
 alias ga='git add . && git status'
 alias gc='git commit -m '
+alias gl='git log --oneline'
 
 # Vim
 alias v='vim '
