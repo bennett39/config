@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -18,6 +19,13 @@ set t_Co=256
 
 " jk is escape
 inoremap jk <esc>
+
+" <C-n> is nerdtree
+nmap <C-n> :NERDTreeToggle<CR>
+
+" Splits open order
+set splitbelow
+set splitright
 
 " coloring and background
 syntax on
