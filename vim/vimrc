@@ -50,12 +50,14 @@ set history=100
 " indentation settings
 filetype indent on
 set nowrap
-set tabstop=4
+set tabstop=2
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set autoindent
 set smartindent
+
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " remove white space on save
 " autocmd BufWritePre * :%s/\s\+$//e
