@@ -1,3 +1,82 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+
+# tmux default shell
+eval '$tmux'
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 #!/bin/bash
 
 # Git
@@ -38,18 +117,10 @@ alias ls='ls -CF --color=auto'
 alias la='ls -ah --color=auto'
 alias ll='ls -ahl --color=auto'
 
-# Common files/directories
-alias repos='cd ~/Workspace/git-repos'
-alias log39='cd ~/Workspace/git-repos/100-days-of-code/ && vim log.md'
-alias logh='ga && gc "Add daily log" && gh'
-alias bashrc='cd ~/Workspace/git-repos/hello-world/bash/ && vim bashrc.sh'
-alias vimrc='cd ~/Workspace/git-repos/hello-world/vim/ && vim vimrc'
-alias euler='cd ~/Workspace/git-repos/euler'
-alias feed='cd ~/Workspace/git-repos/dev-feed/'
-alias tbot='cd ~/Workspace/git-repos/twitter-bot'
-alias sudoku='cd ~/Workspace/git-repos/sudoku-solver'
-alias react='cd ~/Workspace/git-repos/react-hello'
-alias folio='cd ~/Workspace/git-repos/portfolio/portfolio/src'
+# Aliases
+
+alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
+alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
@@ -69,14 +140,6 @@ HISTSIZE=100
 HISTFILESIZE=2000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 
-# Updates PATH for the Google Cloud SDK.
-if [ -f '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/path.bash.inc' ]; then . '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/path.bash.inc'; fi
-
-# Enables shell command completion for gcloud.
-if [ -f '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bennett/Workspace/git-repos/learning/gcloud/google-cloud-sdk/completion.bash.inc'; fi
-
-# pyenv stuff https://github.com/yyuu/pyenv
-export PATH="~/.pyenv/bin:$PATH"
+export PATH="/home/bennett/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-export PYENV_VERSION=
