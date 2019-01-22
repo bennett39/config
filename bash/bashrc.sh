@@ -1,9 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
-# tmux default shell
-eval '$tmux'
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -121,6 +118,7 @@ alias ll='ls -ahl --color=auto'
 
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
+alias tmux='tmux -2'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
