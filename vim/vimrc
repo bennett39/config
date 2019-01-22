@@ -1,5 +1,5 @@
 "[1 Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/pluggies')
+call plug#begin('~/.vim/plugins')
 
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
