@@ -87,6 +87,9 @@ alias gl='git log --oneline'
 # Vim
 alias v='vim '
 
+# For yarn - nodejs alias
+alias node='nodejs'
+
 # Directory traversal
 up(){
     local d=""
