@@ -34,15 +34,12 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+# set a fancy prompt
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -57,16 +54,9 @@ fi
 
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# enable programmable completion features
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -118,10 +108,12 @@ alias la='ls -ah --color=auto'
 alias ll='ls -ahl --color=auto'
 
 # Aliases
-
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
+alias tbot='cd ~/Repos/twitter-bot/'
+alias repos='cd ~/Repos/'
+alias log39='cd ~/Repos/diary/diary.md'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
@@ -135,12 +127,17 @@ export EDITOR=vim
 # UTF-8 locale
 export LANG="C.UTF-8"
 
-# History
+# History config
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=100
 HISTFILESIZE=2000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 
+# pyenv path and autostart
 export PATH="/home/bennett/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# tmux autostart
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
+
