@@ -21,11 +21,17 @@ set t_Co=256
 inoremap jk <esc>
 
 " <C-n> is nerdtree
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
 
 " Splits open order
 set splitbelow
 set splitright
+
+" More split settings
+nnoremap <Leader>j <C-W><C-J>
+nnoremap <Leader>k <C-W><C-K>
+nnoremap <Leader>l <C-W><C-L>
+nnoremap <Leader>h <C-W><C-H>
 
 " coloring and background
 syntax on
