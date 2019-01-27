@@ -113,7 +113,7 @@ alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
 alias tbot='cd ~/Repos/twitter-bot/'
 alias repos='cd ~/Repos/'
-alias log39='cd ~/Repos/diary/diary.md'
+alias log39='cd ~/Repos/diary/ && vim diary.md'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
@@ -139,5 +139,5 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # tmux autostart
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
+[ -z "$tmux -2"  ] && { tmux attach || exec tmux new-session;}
 
