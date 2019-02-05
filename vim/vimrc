@@ -20,6 +20,10 @@ set t_Co=256
 " jk is escape
 inoremap jk <esc>
 
+" leader key
+let mapleader=" "
+map <leader>s :source ~/.vimrc<CR>
+
 " <C-n> is nerdtree
 nmap <Leader>n :NERDTreeToggle<CR>
 
@@ -53,9 +57,6 @@ set textwidth=72
 set number
 set relativenumber
 
-" leader key
-let mapleader=" "
-map <leader>s :source ~/.vimrc<CR>
 
 " keep more in memory
 set hidden
@@ -71,7 +72,8 @@ set expandtab
 set autoindent
 set smartindent
 
-autocmd FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType python :setlocal shiftwidth=4 
+autocmd FileType python :setlocal tabstop=4
 
 " remove white space on save
 " autocmd BufWritePre * :%s/\s\+$//e
