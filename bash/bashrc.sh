@@ -111,6 +111,8 @@ alias ll='ls -ahl --color=auto'
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
+alias sp='tmux split-window -vc $PWD'
+alias vsp='tmux split-window -hc $PWD'
 alias tbot='cd ~/Repos/twitter-bot/'
 alias repos='cd ~/Repos/'
 alias log39='cd ~/Repos/diary/ && vim diary.md'
@@ -137,7 +139,3 @@ HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 export PATH="/home/bennett/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-# tmux autostart
-[ -z "$tmux -2"  ] && { tmux attach || exec tmux new-session;}
-
