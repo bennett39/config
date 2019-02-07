@@ -80,6 +80,9 @@ alias v='vim '
 # For yarn - nodejs alias
 alias node='nodejs'
 
+# Postgres start
+alias pgstart='sudo /etc/init.d/postgresql restart'
+
 # Directory traversal
 up(){
     local d=""
