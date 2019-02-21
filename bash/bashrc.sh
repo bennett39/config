@@ -116,7 +116,7 @@ alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
 alias sp='tmux split-window -vc $PWD'
 alias vsp='tmux split-window -hc $PWD'
-alias tbot='cd ~/Repos/twitter-bot/'
+alias tbot='python ~/Repos/twitter-bot/bot.py'
 alias repos='cd ~/Repos/'
 alias log39='cd ~/Repos/diary/ && vim diary.md'
 
@@ -142,3 +142,9 @@ HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 export PATH="/home/bennett/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/bennett/google-cloud-sdk/path.bash.inc' ]; then . '/home/bennett/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/bennett/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bennett/google-cloud-sdk/completion.bash.inc'; fi
