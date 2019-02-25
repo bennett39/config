@@ -119,6 +119,7 @@ alias vsp='tmux split-window -hc $PWD'
 alias tbot='python ~/Repos/twitter-bot/bot.py'
 alias repos='cd ~/Repos/'
 alias log39='cd ~/Repos/diary/ && vim diary.md'
+alias flaskcov='coverage run -m pytest tests.py'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
