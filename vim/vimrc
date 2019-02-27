@@ -76,10 +76,13 @@ autocmd FileType python :setlocal shiftwidth=4
 autocmd FileType python :setlocal tabstop=4
 
 " remove white space on save
-" autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 " highlight search results
 set hlsearch
+
+" Get rid of bell
+set visualbell
 
 " use esc to cancel a search
 " nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
