@@ -149,3 +149,6 @@ if [ -f '/home/bennett/google-cloud-sdk/path.bash.inc' ]; then . '/home/bennett/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/bennett/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bennett/google-cloud-sdk/completion.bash.inc'; fi
+
+# added by travis gem
+[ -f /home/bennett/.travis/travis.sh ] && source /home/bennett/.travis/travis.sh
