@@ -58,7 +58,7 @@ set number
 set relativenumber
 
 " pasting w/o extra space
-set pastetoggle=<leader>p
+set pastetoggle=<C-p>
 
 " keep more in memory
 set hidden
