@@ -124,7 +124,7 @@ alias flaskcov='coverage run -m pytest tests.py'
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
 
 # Let there be color in grep!
-export GREP_OPTIONS='--color=auto'
+alias grep="grep --color=auto"
 
 # Set Vim as my default editor
 export EDITOR=vim
