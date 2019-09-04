@@ -111,8 +111,10 @@ alias la='ls -ah --color=auto'
 alias ll='ls -ahl --color=auto'
 
 # Aliases
-alias vimrc='cd ~/repos/config/vim/ && vim vimrc'
-alias bashrc='cd ~/repos/config/bash/ && vim bashrc.sh'
+alias docker='sudo docker'
+alias docker-compose='sudo docker-compose'
+alias vimrc='cd ~/config/vim/ && vim vimrc'
+alias bashrc='cd ~/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
 alias sp='tmux split-window -vc $PWD'
 alias vsp='tmux split-window -hc $PWD'
@@ -139,7 +141,7 @@ HISTFILESIZE=2000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 
 # pyenv path and autostart
-export PATH="/home/bennett/.pyenv/bin:$PATH"
+export PATH="/home/chrx/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
