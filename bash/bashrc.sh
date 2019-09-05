@@ -111,8 +111,6 @@ alias la='ls -ah --color=auto'
 alias ll='ls -ahl --color=auto'
 
 # Aliases
-alias docker='sudo docker'
-alias docker-compose='sudo docker-compose'
 alias vimrc='cd ~/config/vim/ && vim vimrc'
 alias bashrc='cd ~/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
@@ -121,6 +119,13 @@ alias vsp='tmux split-window -hc $PWD'
 alias tbot='python ~/repos/twitter-bot/bot.py'
 alias repos='cd ~/repos/'
 alias flaskcov='coverage run -m pytest tests.py'
+
+# Cube aliases
+alias dockup='docker-compose up -d'
+alias dockdown='docker-compose down'
+alias dockdj='docker exec -it cube_planning /bin/bash'
+alias dockdb='docker exec -it cube_planning_mysql_db /bin/bash'
+alias docklogs='docker logs cube_planning -f'
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
