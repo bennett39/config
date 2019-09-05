@@ -146,7 +146,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # local PATH
-export PATH="/home/chrx/.local"
+export PATH="$PATH:/home/chrx/.local"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/bennett/google-cloud-sdk/path.bash.inc' ]; then . '/home/bennett/google-cloud-sdk/path.bash.inc'; fi
