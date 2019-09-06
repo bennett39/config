@@ -50,8 +50,8 @@ let g:lightline = {'colorscheme': 'palenight'}
 set guifont=FiraCode\ 12
 
 " add colored column to avoid typing too far right
-set colorcolumn=72
-set textwidth=72
+set colorcolumn=110
+set textwidth=110
 
 " add line numbers
 set number
