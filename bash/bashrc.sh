@@ -111,13 +111,13 @@ alias la='ls -ah --color=auto'
 alias ll='ls -ahl --color=auto'
 
 # Aliases
-alias vimrc='cd ~/repos/config/vim/ && vim vimrc'
-alias bashrc='cd ~/repos/config/bash/ && vim bashrc.sh'
+alias vimrc='cd ~/config/vim/ && vim vimrc'
+alias bashrc='cd ~/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
 alias sp='tmux split-window -vc $PWD'
 alias vsp='tmux split-window -hc $PWD'
-alias tbot='python ~/repos/twitter-bot/bot.py'
-alias repos='cd ~/repos/'
+alias tbot='python ~//twitter-bot/bot.py'
+alias repos='cd ~/'
 alias flaskcov='coverage run -m pytest tests.py'
 
 # Prompt color
