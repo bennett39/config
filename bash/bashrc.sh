@@ -77,9 +77,6 @@ alias gl='git log --oneline'
 # Vim
 alias v='vim '
 
-# For yarn - nodejs alias
-alias node='nodejs'
-
 # Postgres start
 alias pgstart='sudo /etc/init.d/postgresql restart'
 
@@ -161,3 +158,7 @@ if [ -f '/home/bennett/google-cloud-sdk/completion.bash.inc' ]; then . '/home/be
 
 # added by travis gem
 [ -f /home/bennett/.travis/travis.sh ] && source /home/bennett/.travis/travis.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
