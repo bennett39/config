@@ -124,6 +124,9 @@ alias dockdj='docker exec -it cube_planning /bin/bash'
 alias dockdb='docker exec -it cube_planning_mysql_db /bin/bash'
 alias docklogs='docker logs cube_planning -f'
 
+# ngrok
+export PATH=$PATH:/home/chrx/.ngrok
+
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
 
