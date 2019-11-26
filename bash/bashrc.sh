@@ -120,9 +120,14 @@ alias flaskcov='coverage run -m pytest tests.py'
 # Cube aliases
 alias dockup='docker-compose up -d'
 alias dockdown='docker-compose down'
+alias dockbuild='dockup --build'
+alias dockvolumes='dockdown --volumes'
+alias dockwipe='dockvolumes; dockbuild; sleep 10; dockdown; dockup;'
 alias dockdj='docker exec -it cube_planning /bin/bash'
 alias dockdb='docker exec -it cube_planning_mysql_db /bin/bash'
-alias docklogs='docker logs cube_planning -f'
+alias dockwork='docker logs -f cube_planning_worker'
+alias docklogs='docker logs -f cube_planning'
+alias postman='/usr/lib/Postman/Postman &; disown'
 
 # ngrok
 export PATH=$PATH:/home/chrx/.ngrok
@@ -165,3 +170,19 @@ if [ -f '/home/bennett/google-cloud-sdk/completion.bash.inc' ]; then . '/home/be
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/chrx/.pyenv/versions/miniconda3-latest/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/chrx/.pyenv/versions/miniconda3-latest/etc/profile.d/conda.sh" ]; then
+        . "/home/chrx/.pyenv/versions/miniconda3-latest/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/chrx/.pyenv/versions/miniconda3-latest/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
