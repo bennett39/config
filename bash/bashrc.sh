@@ -103,19 +103,21 @@ mkd(){
 # Common commands
 alias h='history|grep '
 alias f='find . |grep '
-alias ls='ls -CF --color=auto'
-alias la='ls -ah --color=auto'
-alias ll='ls -ahl --color=auto'
+alias ls='ls -CHG'
+alias la='ls -ahG'
+alias ll='ls -ahlG'
+
+# Python
+alias python='python3'
+alias pip='pip3'
 
 # Aliases
-alias vimrc='cd ~/config/vim/ && vim vimrc'
-alias bashrc='cd ~/config/bash/ && vim bashrc.sh'
+alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
+alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias tmux='tmux -2'
 alias sp='tmux split-window -vc $PWD'
 alias vsp='tmux split-window -hc $PWD'
-alias tbot='python ~//twitter-bot/bot.py'
-alias repos='cd ~/'
-alias flaskcov='coverage run -m pytest tests.py'
+alias repos='cd ~/Repos'
 
 # Cube aliases
 alias dockup='docker-compose up -d'
@@ -128,9 +130,6 @@ alias dockdb='docker exec -it cube_planning_mysql_db /bin/bash'
 alias dockwork='docker logs -f cube_planning_worker'
 alias docklogs='docker logs -f cube_planning'
 alias postman='/usr/lib/Postman/Postman &; disown'
-
-# ngrok
-export PATH=$PATH:/home/chrx/.ngrok
 
 # Prompt color
 export PS1="\[\e[1m\e[95m\]\u\[\e[m\]\[\e[95m\]:\[\e[m\]\[\e[1m\e[96m\]\W\[\e[m\]\\$ "
@@ -150,39 +149,5 @@ HISTSIZE=100
 HISTFILESIZE=2000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 
-# pyenv path and autostart
-export PATH="/home/chrx/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# local PATH
-export PATH="$PATH:/home/chrx/.local"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/bennett/google-cloud-sdk/path.bash.inc' ]; then . '/home/bennett/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/bennett/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bennett/google-cloud-sdk/completion.bash.inc'; fi
-
-# added by travis gem
-[ -f /home/bennett/.travis/travis.sh ] && source /home/bennett/.travis/travis.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/chrx/.pyenv/versions/miniconda3-latest/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/chrx/.pyenv/versions/miniconda3-latest/etc/profile.d/conda.sh" ]; then
-        . "/home/chrx/.pyenv/versions/miniconda3-latest/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/chrx/.pyenv/versions/miniconda3-latest/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
