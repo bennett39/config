@@ -60,6 +60,10 @@ set relativenumber
 " pasting w/o extra space
 set pastetoggle=<C-p>
 
+" Clipboard
+map <C-c> :.w !pbcopy<CR><CR>
+map <C-v> :r !pbpaste<CR>
+
 " keep more in memory
 set hidden
 set history=100
@@ -128,3 +132,4 @@ let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
 " Git Gutter settings
 let g:gitgutter_sign_column_always=1
+

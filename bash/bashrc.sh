@@ -107,10 +107,6 @@ alias ls='ls -CHG'
 alias la='ls -ahG'
 alias ll='ls -ahlG'
 
-# Python
-alias python='python3'
-alias pip='pip3'
-
 # Aliases
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
@@ -151,3 +147,6 @@ HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
