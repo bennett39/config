@@ -156,3 +156,8 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 
 eval "$(thefuck --alias)"
+
+# load profile
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
+fi
