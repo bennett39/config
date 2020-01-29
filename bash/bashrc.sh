@@ -77,6 +77,8 @@ alias gh='git push'
 alias ga='git add . && git status'
 alias gc='git commit -m '
 alias gl='git log --oneline'
+alias gb='git branch'
+alias gk='git checkout'
 
 # Vim
 alias v='vim '
