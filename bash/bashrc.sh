@@ -74,7 +74,7 @@ fi
 alias gs='git status'
 alias gp='git pull origin '
 alias gh='git push'
-alias ga='git add . && git status'
+alias ga='git add . && git status && ack "pdb"'
 alias gc='git commit -m '
 alias gl='git log --oneline'
 alias gb='git branch'
