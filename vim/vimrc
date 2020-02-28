@@ -10,6 +10,7 @@ Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -26,6 +27,13 @@ map <leader>s :source ~/.vimrc<CR>
 
 " <C-n> is nerdtree
 nmap <Leader>n :NERDTreeToggle<CR>
+
+" Fuzzy search w/ ack
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Splits open order
 set splitbelow
