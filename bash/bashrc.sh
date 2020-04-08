@@ -157,9 +157,6 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-
-eval "$(thefuck --alias)"
-
 # load profile
 if [ -f ~/.bash_profile ]; then
   . ~/.bash_profile
