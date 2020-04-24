@@ -120,6 +120,7 @@ alias tmux='tmux -2'
 alias sp='tmux split-window -vc $PWD'
 alias vsp='tmux split-window -hc $PWD'
 alias repos='cd ~/Repos'
+alias cubeweb='cd ~/Repos/cube_planning/web'
 
 # Cube aliases
 alias dockup='docker-compose up -d'
