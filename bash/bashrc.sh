@@ -86,6 +86,9 @@ alias la='ls -ahG'
 alias ll='ls -ahlG'
 alias v='vim '
 
+# Remove newlines at end of file, recursively
+alias rmnew="find . -type f -name '*.html' -exec sed -i '' -e :a -e '/^\n*$/{$d;N;};/\n$/ba' {} \;"
+
 # Git
 alias gs='git status'
 alias gp='git pull origin '
@@ -114,7 +117,7 @@ alias dockboot='dockdown; dockup'
 alias dockvolumes='dockdown --volumes'
 alias dockwipe='dockvolumes; dockbuild; sleep 10; dockdown; dockup;'
 alias dockdj='docker exec -it cube_planning /bin/bash'
-alias dockdb='docker exec -it cube_planning_mysql_db /bin/bash'
+alias dockdb='docker exec -it cube_mysql_db /bin/bash'
 alias dockwork='docker logs -f cube_planning_worker'
 alias docklogs='docker logs -f cube_planning'
 alias ngrok='/Applications/ngrok'
