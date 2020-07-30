@@ -111,11 +111,12 @@ alias pgstart='sudo /etc/init.d/postgresql restart'
 
 # Cube aliases
 alias dockup='docker-compose up -d'
+alias dockjs='docker-compose -f docker-compose.js-dev.yml up -d'
 alias dockdown='docker-compose down'
 alias dockbuild='dockup --build'
 alias dockboot='dockdown; dockup'
 alias dockvolumes='dockdown --volumes'
-alias dockwipe='dockvolumes; dockbuild; sleep 10; dockdown; dockup;'
+alias dockwipe='dockvolumes; dockbuild; sleep 5; dockdown; dockup;'
 alias dockdj='docker exec -it cube_planning /bin/bash'
 alias dockdb='docker exec -it cube_mysql_db /bin/bash'
 alias dockwork='docker logs -f cube_planning_worker'
