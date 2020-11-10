@@ -94,7 +94,7 @@ alias gs='git status'
 alias gp='git pull origin '
 alias gh='git push'
 alias ga='git add . && git status && ack "pdb"'
-alias gc='git commit -m '
+alias gc='cz c'
 alias gl='git log --oneline'
 alias gb='git branch'
 alias gk='git checkout'
@@ -144,3 +144,7 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 if [ -f ~/.bash_profile ]; then
   . ~/.bash_profile
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
