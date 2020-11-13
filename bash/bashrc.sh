@@ -78,6 +78,11 @@ mkd(){
     cd $1
 }
 
+# Checkout remote branch
+gto(){
+    git checkout --track origin/$1
+}
+
 # Common commands
 alias h='history|grep '
 alias f='find . |grep '
@@ -99,7 +104,6 @@ alias gc='cz c'
 alias gl='git log --oneline'
 alias gb='git branch'
 alias gk='git checkout'
-alias gto='git checkout --track origin/'
 alias gmm='git merge master'
 
 # Directory & File Aliases
