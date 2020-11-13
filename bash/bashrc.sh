@@ -85,6 +85,7 @@ alias ls='ls -CHG'
 alias la='ls -ahG'
 alias ll='ls -ahlG'
 alias v='vim '
+alias agq='ag -Q '
 
 # Remove newlines at end of file, recursively
 alias rmnew="find . -type f -name '*.html' -exec sed -i '' -e :a -e '/^\n*$/{$d;N;};/\n$/ba' {} \;"
@@ -93,17 +94,21 @@ alias rmnew="find . -type f -name '*.html' -exec sed -i '' -e :a -e '/^\n*$/{$d;
 alias gs='git status'
 alias gp='git pull origin '
 alias gh='git push'
-alias ga='git add . && git status && ack "pdb"'
+alias ga='git add . && git status && ag "pdb" --py'
 alias gc='cz c'
 alias gl='git log --oneline'
 alias gb='git branch'
 alias gk='git checkout'
+alias gto='git checkout --track origin/'
+alias gmm='git merge master'
 
-# Directory  & File Aliases
+# Directory & File Aliases
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias repos='cd ~/Repos'
 alias cubeweb='cd ~/Repos/cube_planning/web'
+alias cubejs='cd ~/Repos/cube_planning/web && dockdown && dockjs && cd vue-app'
+alias cubedocs='cs ~/Repos/cube_planning/api-docs'
 alias journal='cd ~/Repos/daily39 && vim journal.md'
 
 # Postgres start
