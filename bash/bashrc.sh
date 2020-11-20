@@ -105,6 +105,7 @@ alias gl='git log --oneline'
 alias gb='git branch'
 alias gk='git checkout'
 alias gmm='git merge master'
+alias gclean='git branch | grep -v "master" | xargs git branch -D'
 
 # Directory & File Aliases
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
