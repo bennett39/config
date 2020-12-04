@@ -83,6 +83,12 @@ gto(){
     git checkout --track origin/$1
 }
 
+gstart(){
+    git checkout master
+    git pull
+    git checkout -b CUBE-$1
+}
+
 # Common commands
 alias h='history|grep '
 alias f='find . |grep '
