@@ -119,7 +119,7 @@ alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias repos='cd ~/Repos'
 alias cubeweb='cd ~/Repos/cube_planning/web'
-alias cubejs='cd ~/Repos/cube_planning/web && dockdown && dockjs && cd vue-app'
+alias cubejs='cd ~/Repos/cube_planning/web && dockdown && dockjs && cd vue-app && yarn start'
 alias cubedocs='cs ~/Repos/cube_planning/api-docs'
 alias journal='cd ~/Repos/daily39 && vim journal.md'
 
