@@ -92,7 +92,7 @@ gstart(){
 # Common commands
 alias h='history|grep '
 alias f='find . |grep '
-alias ls='ls -HG --color'
+alias ls='ls -CHG --color'
 alias la='ls -ahG'
 alias ll='ls -ahlG'
 alias v='vim '
