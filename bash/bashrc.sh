@@ -74,7 +74,7 @@ up(){
 
 # Directory creation
 mkd(){
-    mkdir -p $1
+    mkdir $1
     cd $1
 }
 
@@ -97,6 +97,8 @@ alias la='ls -ahG'
 alias ll='ls -ahlG'
 alias v='vim '
 alias agq='ag -Q '
+alias mkdir="mkdir -pv"
+alias dc="docker-compose"
 
 # Remove newlines at end of file, recursively
 alias rmnew="find . -type f -name '*.html' -exec sed -i '' -e :a -e '/^\n*$/{$d;N;};/\n$/ba' {} \;"
@@ -120,24 +122,27 @@ alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias repos='cd ~/Repos'
 alias cubeweb='cd ~/Repos/cube_planning/web'
 alias cubejs='cd ~/Repos/cube_planning/web && dockdown && dockjs && cd vue-app && yarn start'
-alias cubedocs='cs ~/Repos/cube_planning/api-docs'
+alias cubedocs='cd ~/Repos/cube_planning/api-docs'
 alias journal='cd ~/Repos/daily39 && vim journal.md'
 
 # Postgres start
 alias pgstart='sudo /etc/init.d/postgresql restart'
 
 # Cube aliases
-alias dockup='docker-compose up -d'
-alias dockjs='docker-compose -f docker-compose.js-dev.yml up -d'
-alias dockdown='docker-compose down'
+alias dockup='dc up -d'
+alias dockjs='dc -f docker-compose.js-dev.yml up -d'
+alias dockdown='dc down'
 alias dockbuild='dockup --build'
 alias dockboot='dockdown; dockup'
 alias dockvolumes='dockdown --volumes'
 alias dockwipe='dockvolumes; dockbuild; sleep 5; dockdown; dockup;'
-alias dockdj='docker exec -it cube_planning /bin/bash'
+alias dockdj='dc run web /bin/bash'
 alias dockdb='docker exec -it cube_mysql_db /bin/bash'
 alias dockwork='docker logs -f cube_planning_worker'
 alias docklogs='docker logs -f cube_planning'
+alias dockrun='dc run web'
+alias dockmanage='dockrun python manage.py'
+alias docktest='dockmanage test --noinput'
 alias ngrok='/Applications/ngrok'
 
 # Prompt color
