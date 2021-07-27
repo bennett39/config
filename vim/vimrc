@@ -32,8 +32,6 @@ nmap <Leader>n :NERDTreeToggle<CR>
 
 " Saving :Q = :q
 :command Q q
-:command X x
-:command W w
 
 " Fuzzy search w/ ack
 if executable('ag')
