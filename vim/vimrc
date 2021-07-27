@@ -23,10 +23,17 @@ inoremap jk <esc>
 
 " leader key
 let mapleader=" "
+
+" <C-s> reloads the vimrc
 map <leader>s :source ~/.vimrc<CR>
 
 " <C-n> is nerdtree
 nmap <Leader>n :NERDTreeToggle<CR>
+
+" Saving :Q = :q
+:command Q q
+:command X x
+:command W w
 
 " Fuzzy search w/ ack
 if executable('ag')
