@@ -121,7 +121,6 @@ alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias repos='cd ~/Repos'
 alias cubeweb='cd ~/Repos/cube_planning/web'
-alias cubejs='cd ~/Repos/cube_planning/web && dockdown && dockjs && cd vue-app && yarn start'
 alias cubedocs='cd ~/Repos/cube_planning/api-docs'
 alias journal='cd ~/Repos/daily39 && vim journal.md'
 
@@ -143,6 +142,9 @@ alias dockwork='docker logs -f cube_planning_worker'
 alias docklogs='docker logs -f cube_planning'
 alias dockmanage='dockrun python manage.py'
 alias docktest='dockmanage test --noinput'
+alias clearly='docker run --rm --network host -ti --name clearly-client -v ipythonhist:/root/.ipython/profile_default/ rsalmei/clearly client'
+alias clearmir='clearly clearly-mirror.infra.cubesoftware.com 12223'
+alias clearprod='clearly clearly-prod.infra.cubesoftware.com 12223'
 alias ngrok='/Applications/ngrok'
 
 # Prompt color
@@ -153,6 +155,10 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # Let there be color in grep!
 alias grep="grep --color=auto"
+
+# Python3
+alias python="python3"
+alias pip="pip3"
 
 # Set Vim as my default editor
 export EDITOR=vim
