@@ -94,8 +94,8 @@ set smartindent
 
 autocmd FileType python :setlocal shiftwidth=4
 autocmd FileType python :setlocal tabstop=4
-autocmd FileType json :setlocal shiftwidth=2
-autocmd FileType json :setlocal tabstop=2
+autocmd FileType json,javascript :setlocal shiftwidth=2
+autocmd FileType json,javascript :setlocal tabstop=2
 
 " remove white space on save
 autocmd BufWritePre * :%s/\s\+$//e
