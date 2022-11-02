@@ -1,4 +1,4 @@
-# nvm, yarn, node
+# nvm, tarn, node
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -44,6 +44,7 @@ alias agq='ag -Q '
 alias mkdir="mkdir -pv"
 alias dc="docker-compose"
 alias grep="grep --color=auto"
+alias rst='eval $SHELL'
 
 # Remove newlines at end of file, recursively
 alias rmnew="find . -type f -name '*.html' -exec sed -i '' -e :a -e '/^\n*$/{$d;N;};/\n$/ba' {} \;"
@@ -59,13 +60,17 @@ alias gb='git branch'
 alias gk='git checkout'
 alias gf='git fetch'
 alias gmm='git merge master'
-alias gclean='gk master && git pull && git branch | grep -v "master" | xargs git branch -d'
+alias gclean='gk main && git pull && git branch | grep -v "main" | xargs git branch -d'
+alias gstart='gk main && git pull && gk -b '
 
 # Directory & File Aliases
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
+alias zshrc='vim ~/Repos/config/zsh/.zshrc'
 alias repos='cd ~/Repos'
 alias acorn='cd ~/Repos/acorn'
+alias ident='cd ~/Repos/acorn/@app/identity'
+alias acct='cd ~/Repos/acorn/@app/accounts'
 
 # Docker aliases
 alias dockup='dc up -d'
@@ -87,6 +92,9 @@ alias pip="pip3"
 export EDITOR=vim
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# AWS config
+export AWS_SDK_LOAD_CONFIG=true
 
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}%% "
