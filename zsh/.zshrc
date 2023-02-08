@@ -26,7 +26,6 @@ export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 
 export PROMPT="%n %~ "
-export RPROMPT="%t"
 
 # Locale
 export LC_ALL=en_US.UTF-8
@@ -59,7 +58,7 @@ alias gl='git log --oneline'
 alias gb='git branch'
 alias gk='git checkout'
 alias gf='git fetch'
-alias gmm='git merge master'
+alias gmm='git merge main'
 alias gclean='gk main && git pull && git branch | grep -v "main" | xargs git branch -d'
 alias gstart='gk main && git pull && gk -b '
 
@@ -68,9 +67,6 @@ alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias zshrc='vim ~/Repos/config/zsh/.zshrc'
 alias repos='cd ~/Repos'
-alias acorn='cd ~/Repos/acorn'
-alias ident='cd ~/Repos/acorn/@app/identity'
-alias acct='cd ~/Repos/acorn/@app/accounts'
 
 # Docker aliases
 alias dockup='dc up -d'
@@ -80,6 +76,16 @@ alias dockboot='dockdown; dockup'
 alias dockvolumes='dockdown --volumes'
 alias dockwipe='dockvolumes; dockbuild; sleep 5; dockdown; dockup;'
 alias dockrun='dc run --rm '
+
+# Ingigo-specific aliases
+alias yeet='yarn lint:pr && yarn test --no-cov'
+alias acorn='cd ~/Repos/acorn'
+alias ident='cd ~/Repos/acorn/@app/identity'
+alias acct='cd ~/Repos/acorn/@app/accounts'
+alias authz='cd ~/Repos/acorn/@app/authz'
+alias invit='cd ~/Repos/acorn/@app/invitations'
+alias terra='cd ~/Repos/terraform'
+
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
