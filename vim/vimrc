@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugins')
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'

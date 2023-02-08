@@ -78,7 +78,7 @@ alias dockwipe='dockvolumes; dockbuild; sleep 5; dockdown; dockup;'
 alias dockrun='dc run --rm '
 
 # Ingigo-specific aliases
-alias yeet='yarn lint:pr && yarn test --no-cov'
+alias yeet='yarn test --no-cov --disable-warnings'
 alias acorn='cd ~/Repos/acorn'
 alias ident='cd ~/Repos/acorn/@app/identity'
 alias acct='cd ~/Repos/acorn/@app/accounts'
