@@ -26,14 +26,21 @@ export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 
 export PROMPT="%n %~ "
+export TERM=xterm-256color
 
 # Locale
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LANG="C.UTF-8"
 
+# history
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+setopt sharehistory
+setopt extendedhistory
+
 # Common commands
-alias h='history|grep '
+alias h='history 1|grep '
 alias f='find . |grep '
 alias ls='ls -CHG --color'
 alias la='ls -ahG'
@@ -84,8 +91,9 @@ alias ident='cd ~/Repos/acorn/@app/identity'
 alias acct='cd ~/Repos/acorn/@app/accounts'
 alias authz='cd ~/Repos/acorn/@app/authz'
 alias invit='cd ~/Repos/acorn/@app/invitations'
+alias sdk='cd ~/Repos/acorn/@package/'
 alias terra='cd ~/Repos/terraform'
-
+alias artifact='dev-cli configure --code-artifact'
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'

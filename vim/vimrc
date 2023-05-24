@@ -72,6 +72,10 @@ let g:lightline = {'colorscheme': 'palenight'}
 
 " font
 set guifont=FiraCode\ 12
+set guioptions-=l
+set guioptions-=r
+set guioptions-=L
+set guioptions-=R
 
 " add colored column to avoid typing too far right
 set colorcolumn=110
@@ -83,10 +87,6 @@ set relativenumber
 
 " pasting w/o extra space
 set pastetoggle=<C-p>
-
-" Clipboard
-map <C-c> :.w !pbcopy<CR><CR>
-map <C-v> :r !pbpaste<CR>
 
 " keep more in memory
 set hidden
@@ -164,3 +164,6 @@ let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 " Git Gutter settings
 let g:gitgutter_sign_column_always=1
 
+" RegEx was slow for typescript syntax highlighting
+" https://stackoverflow.com/a/66983778
+set re=0
