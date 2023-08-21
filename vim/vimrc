@@ -12,16 +12,16 @@ call plug#begin('~/.vim/plugins')
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -77,13 +77,9 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-" add colored column to avoid typing too far right
-set colorcolumn=110
-set textwidth=110
-
 " add line numbers
 set number
-set relativenumber
+set norelativenumber
 
 " pasting w/o extra space
 set pastetoggle=<C-p>
@@ -116,12 +112,6 @@ set hlsearch
 " Get rid of bell
 set visualbell
 
-" use esc to cancel a search
-" nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
-
-" use leader-leader to switch between prev document
-" nnoremap <Leader><Leader> :e#<CR>
-
 " show matching parentheses
 set showmatch
 
@@ -140,12 +130,6 @@ set ignorecase
 set smartcase
 set incsearch
 
-" command-t additional commands
-" noremap <Leader>r :CommandTFlush<CR>
-set wildignore+=*.log,*.sql,*.cache
-set wildmode=longest,list,full
-set wildmenu
-
 set completeopt=longest,menuone
 
 " nerdcomments settings
@@ -156,10 +140,10 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 
 " NERDTree keymap
-noremap <Leader>d :NERDTree<CR>
-let NERDTreeMapActivateNode='<right>'
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+" noremap <Leader>d :NERDTree<CR>
+" let NERDTreeMapActivateNode='<right>'
+" let NERDTreeShowHidden=1
+" let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
 " Git Gutter settings
 let g:gitgutter_sign_column_always=1
