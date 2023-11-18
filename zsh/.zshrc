@@ -73,6 +73,7 @@ alias gstart='gk main && git pull && gk -b '
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias zshrc='vim ~/Repos/config/zsh/.zshrc'
+alias blog='cd ~/Repos/dp-starter-blog/content/blog'
 alias repos='cd ~/Repos'
 
 # Docker aliases
@@ -112,3 +113,5 @@ export AWS_SDK_LOAD_CONFIG=true
 
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}%% "
+
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:/Users/bennettgarner/.local/bin:/Users/bennettgarner/.pyenv/bin:/Users/bennettgarner/.nvm/versions/node/v20.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/bin
