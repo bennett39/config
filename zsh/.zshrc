@@ -73,7 +73,7 @@ alias gstart='gk main && git pull && gk -b '
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
 alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias zshrc='vim ~/Repos/config/zsh/.zshrc'
-alias blog='cd ~/Repos/dp-starter-blog/content/blog'
+alias blog='cd ~/Repos/dp-starter-blog/content/blog && git pull'
 alias repos='cd ~/Repos'
 
 # Docker aliases
