@@ -59,7 +59,7 @@ alias rmnew="find . -type f -name '*.html' -exec sed -i '' -e :a -e '/^\n*$/{$d;
 alias gs='git status'
 alias gp='git pull origin '
 alias gh='git push'
-alias ga='git add . && git status && ag "pdb" --py'
+alias ga='git add . && git status'
 alias gc='git commit -m'
 alias gl='git log --oneline'
 alias gb='git branch'
@@ -87,6 +87,7 @@ alias dockrun='dc run --rm '
 
 # Ingigo-specific aliases
 alias yeet='yarn test --no-cov --disable-warnings'
+alias yf='yarn format-all && ga'
 alias acorn='cd ~/Repos/acorn'
 alias ident='cd ~/Repos/acorn/@app/identity'
 alias acct='cd ~/Repos/acorn/@app/accounts'
