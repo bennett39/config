@@ -85,18 +85,6 @@ alias dockvolumes='dockdown --volumes'
 alias dockwipe='dockvolumes; dockbuild; sleep 5; dockdown; dockup;'
 alias dockrun='dc run --rm '
 
-# Ingigo-specific aliases
-alias yeet='yarn test --no-cov --disable-warnings'
-alias yf='yarn format-all && ga'
-alias acorn='cd ~/Repos/acorn'
-alias ident='cd ~/Repos/acorn/@app/identity'
-alias acct='cd ~/Repos/acorn/@app/accounts'
-alias authz='cd ~/Repos/acorn/@app/authz'
-alias invit='cd ~/Repos/acorn/@app/invitations'
-alias sdk='cd ~/Repos/acorn/@package/'
-alias terra='cd ~/Repos/terraform'
-alias artifact='dev-cli configure --code-artifact'
-
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
