@@ -2,6 +2,7 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source ~/.nvm/nvm.sh
 
 # pyenv & virtualenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -42,7 +43,7 @@ setopt extendedhistory
 # Common commands
 alias h='history 1|grep '
 alias f='find . |grep '
-alias ls='ls -CHG --color'
+alias ls='gls -CHG --color'
 alias la='ls -ahG'
 alias ll='ls -ahlG'
 alias v='vim '
@@ -68,6 +69,7 @@ alias gf='git fetch'
 alias gmm='git merge main'
 alias gclean='gk main && git pull && git branch | grep -v "main" | xargs git branch -d'
 alias gstart='gk main && git pull && gk -b '
+alias gto='git checkout --track'
 
 # Directory & File Aliases
 alias vimrc='cd ~/Repos/config/vim/ && vim vimrc'
@@ -75,6 +77,9 @@ alias bashrc='cd ~/Repos/config/bash/ && vim bashrc.sh'
 alias zshrc='vim ~/Repos/config/zsh/.zshrc'
 alias blog='cd ~/Repos/dp-starter-blog/content/blog && git pull'
 alias repos='cd ~/Repos'
+
+# Sealed aliases
+alias sss='cd ~/Repos/s3'
 
 # Docker aliases
 alias dockup='dc up -d'
@@ -87,6 +92,9 @@ alias dockrun='dc run --rm '
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# gdircolors https://github.com/gibbling/dircolors
+eval $(gdircolors ~/.dircolors/dircolors.256dark)
 
 # Python3
 alias python="python3"
@@ -102,5 +110,3 @@ export AWS_SDK_LOAD_CONFIG=true
 
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}%% "
-
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:/Users/bennettgarner/.local/bin:/Users/bennettgarner/.pyenv/bin:/Users/bennettgarner/.nvm/versions/node/v20.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/bin
