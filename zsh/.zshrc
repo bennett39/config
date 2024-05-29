@@ -67,8 +67,9 @@ alias gb='git branch'
 alias gk='git checkout'
 alias gf='git fetch'
 alias gmm='git merge main'
-alias gclean='gk main && git pull && git branch | grep -v "main" | xargs git branch -d'
-alias gstart='gk main && git pull && gk -b '
+alias gmd='git merge develop'
+alias gclean='gk develop && git pull && git branch | grep -v "develop" | xargs git branch -d'
+alias gstart='gk develop && git pull && gk -b '
 alias gto='git checkout --track'
 
 # Directory & File Aliases
@@ -80,6 +81,8 @@ alias repos='cd ~/Repos'
 
 # Sealed aliases
 alias sss='cd ~/Repos/s3'
+alias dv='devcontainer --workspace-folder=.'
+alias dv-exec='docker exec -it --user vscode s3_devcontainer-app-1 bash'
 
 # Docker aliases
 alias dockup='dc up -d'
@@ -110,3 +113,9 @@ export AWS_SDK_LOAD_CONFIG=true
 
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%} %{$fg[yellow]%}%~ %{$reset_color%}%% "
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bennettgarner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bennettgarner/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bennettgarner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bennettgarner/google-cloud-sdk/completion.zsh.inc'; fi
