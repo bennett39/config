@@ -82,7 +82,9 @@ alias repos='cd ~/Repos'
 # Sealed aliases
 alias sss='cd ~/Repos/s3'
 alias dv='devcontainer --workspace-folder=.'
-alias dv-exec='docker exec -it --user vscode s3_devcontainer-app-1 bash'
+alias dv-s3='docker exec -it --user vscode s3_devcontainer-app-1 bash'
+alias dv-ds3='docker exec -it --user vscode data-services_devcontainer-app-1 bash'
+alias sngrok='ngrok http --domain=imp-awaited-caribou.ngrok-free.app 8080'
 
 # Docker aliases
 alias dockup='dc up -d'
@@ -119,3 +121,15 @@ if [ -f '/Users/bennettgarner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/b
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bennettgarner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bennettgarner/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Git ssh
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &> $HOME/.ssh/ssh-agent
+   fi
+   eval `cat $HOME/.ssh/ssh-agent` > /dev/null
+   ssh-add $HOME/.ssh/id_ed25519 2> /dev/null
+fi
